@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Md Zafar — Portfolio</title>
+  <meta name="description" content="Md Zafar — PLC Programming · Researcher · Automation Engineer" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    :root{
+      --bg-1:#071029;--bg-2:#0d2747;--accent:#58a6ff;--muted:#98a6bd;--card:rgba(13,36,61,0.35);
+    }
+    html,body{height:100%;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:#dbe9ff}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{position:sticky;top:0;z-index:40;backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(5,12,25,0.45), rgba(5,12,25,0.15));border-bottom:1px solid rgba(255,255,255,0.03)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
+    .logo-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(90deg,#8ee3ff,#3b82f6);box-shadow:0 0 12px rgba(88,166,255,0.3)}
+    nav ul{display:flex;gap:18px;list-style:none;align-items:center}
+    nav li{font-size:14px;color:var(--muted)}
+    .cta{display:inline-flex;gap:8px;align-items:center}
+    .btn{background:linear-gradient(90deg,#4da8ff,#2f5cff);color:#fff;padding:8px 14px;border-radius:10px;font-weight:600;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(46,108,255,0.15)}
+    .ghost{background:transparent;color:var(--muted);border-radius:10px;padding:8px 12px;border:1px solid rgba(255,255,255,0.03)}
+
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:48px 0}
+    .hero-left{position:relative;display:flex;align-items:center;justify-content:center;min-height:360px}
+    .portrait{width:320px;height:320px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 20%, rgba(88,166,255,0.12), transparent 25%), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));box-shadow:0 10px 40px rgba(6,16,40,0.6);border:1px solid rgba(255,255,255,0.04);overflow:hidden}
+    .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+    .glow{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(36px);background:radial-gradient(circle at 30% 30%, rgba(88,166,255,0.45), rgba(59,130,246,0.12) 30%, transparent 55%);transform: translateY(-8px);z-index:-1}
+    .ring{position:absolute;width:420px;height:420px;border-radius:50%;z-index:-0.5;mix-blend-mode:screen;opacity:0.35;background:conic-gradient(from 180deg, rgba(88,166,255,0.18), rgba(59,130,246,0.12) 30%, transparent 60%);transform: rotate(18deg);filter: blur(6px)}
+
+    .hero-right h1{font-size:28px;margin-bottom:8px}
+    .hero-right .sub{color:var(--muted);margin-bottom:18px}
+    .typewriter{display:inline-block;font-weight:700;color:#fff;margin-left:6px}
+    .buttons{display:flex;gap:12px;margin-top:18px}
+    .socials{display:flex;gap:12px;margin-top:16px}
+    .socials a{width:36px;height:36px;border-radius:8px;display:inline-grid;place-items:center;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03)}
+
+    .stats{display:flex;gap:20px;margin-top:36px;border-top:1px solid rgba(255,255,255,0.03);padding-top:22px}
+    .stat{flex:1;text-align:center;padding:12px 8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:10px}
+    .stat .num{font-size:20px;font-weight:800;margin-bottom:4px}
+    .stat .lbl{color:var(--muted);font-size:13px}
+
+    section{padding:60px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;text-align:center}
+      nav ul{display:none}
+    }
+
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:13px}
+    .fade-in{animation:fadeIn .9s ease both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo-dot"></div><div style="font-size:14px">Md Zafar</div></div>
+
+      <nav>
+        <ul>
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#Projects">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta">
+        <a class="ghost" id="themeToggle" href="#" title="Toggle theme">🌙</a>
+        <a class="btn" id="downloadCv" href="https://drive.google.com/uc?export=download&id=1tcrLMW9VA-0W-suQ2HpRep835zPRgOHh">Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="ring"></div>
+        <div class="glow"></div>
+        <div class="portrait card fade-in">
+          <img id="profileImage" src="https://raw.githubusercontent.com/mdzafar864/Portfolio/7e6fe5d34fba4a51fcf94270d53ed61ed9c7ba9f/IMG_20251021_004400.jpg" alt="Md Zafar">
+        </div>
+      </div>
+
+      <div class="hero-right fade-in">
+        <div style="color:var(--muted);font-size:14px;margin-bottom:8px">Hello, I'm</div>
+        <h1 style="font-size:28px;line-height:1.05">Md Zafar
+          <span style="color:var(--muted);font-weight:600;font-size:16px;display:block;margin-top:8px">Electrical Engineer</span>
+        </h1>
+
+        <p class="sub">I work in industrial & software automation, PLC programming and automation testing — building reliable, maintainable systems and automated test solutions.</p>
+
+        <div class="buttons">
+          <a class="btn" href="mailto:mdzafarsabour35@gmail.com">Hire Me</a>
+          <a class="ghost" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="socials" aria-hidden="false">
+          <a href="https://www.linkedin.com/in/mdzafar864?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v2"/>
+            </svg>
+          </a>
+          <a href="https://github.com/mdzafar864" title="GitHub" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 2a10 10 0 0 0-3 19.5c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.1-3.5-1.1-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1 1.7-.9 2.1-1.4-.9-.1-1.8-.4-2.6-1.1-.4-.3-.1-.6.3-.6 1.1.1 2.1.9 3.7 1.4 0-1.7.5-3 1.2-3.9-2.4-.3-4.9-1.2-4.9-5.5 0-1.2.4-2.3 1-3.1-.1-.3-.4-1.4.1-2.9 0 0 .8-.2 2.6 1 1-.3 2.1-.5 3.2-.5s2.2.2 3.2.5c1.8-1.2 2.6-1 2.6-1 .5 1.5.2 2.6.1 2.9.6.9 1 1.9 1 3.1 0 4.3-2.6 5.1-5 5.4.5.4.9 1 .9 2v3c0 .3.2.6.7.5a10 10 0 0 0-3-19.5z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="stats" style="margin-top:18px">
+          <div class="stat"><div class="num" data-target="8">0+</div><div class="lbl">Years experience</div></div>
+          <div class="stat"><div class="num" data-target="120">0+</div><div class="lbl">Projects / Tests</div></div>
+          <div class="stat"><div class="num" data-target="6">0+</div><div class="lbl">Main Technologies</div></div>
+          <div class="stat"><div class="num" data-target="50">0+</div><div class="lbl">Satisfied clients</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about"><div class="card"><h2>About Me</h2><p style="color:var(--muted);margin-top:8px">I specialize in PLC programming, industrial automation, Researcher and automation testing. I deliver robust control logic, test automation suites and maintainable application code with a focus on reliability and safety.</p></div></section>
+
+    <section id="skills"><div class="card"><h2>Skills</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <span class="pill">PLC (Siemens / Allen-Bradley)</span>
+        <span class="pill">SCADA / HMI</span>
+        <span class="pill">Automation Testing</span>
+        <span class="pill">Python / C#</span>
+        <span class="pill">Embedded Systems</span>
+        <span class="pill">Industrial Protocols (Modbus, OPC-UA)</span>
+        <span class="pill">Git & CI</span>
+      </div>
+    </div></section>
+
+    <section id="services"><div class="card"><h2>Services</h2>
+      <ul style="margin-top:8px;color:var(--muted)"><li>PLC Programming & Commissioning</li><li>Automation Test Development</li><li>Control System Design & Simulation</li><li>Software Engineering & Integration</li></ul>
+    </div></section>
+
+    <section id="Projects"><div class="card"><h2>Projects Work</h2><p style="color:var(--muted);margin-top:8px">Add screenshots, project links and brief descriptions of PLC projects, test automation frameworks and software integrations here.</p></div></section>
+
+    <section id="contact"><div class="card"><h2>Contact</h2>
+      <p style="color:var(--muted);margin-top:8px">Interested in working together? Email me at <strong style="color:#fff">mdzafarsabour35@gmail.com</strong> or use the form below.</p>
+      <form style="margin-top:12px;display:grid;gap:8px;grid-template-columns:1fr 1fr;">
+        <input placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+        <input placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+        <textarea placeholder="Message" style="grid-column:1/-1;min-height:110px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
+        <button type="button" class="btn" style="grid-column:1/-1;justify-self:start">Send Message</button>
+      </form>
+    </div></section>
+
+    <footer style="padding:24px 0;color:var(--muted);text-align:center">© <span id="year"></span> Md Zafar — Built with ❤</footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToSection(sel){const el=document.querySelector(sel); if(!el) return; el.scrollIntoView({behavior:'smooth',block:'start'});}
+
+    // Counters
+    const counters = document.querySelectorAll('.num');
+    const speed = 1200;
+    const animateCounters = () => {
+      counters.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target')||'0',10);
+        let start = 0;
+        if(target<=0){ el.textContent='0+'; return; }
+        const stepTime = Math.max(12, Math.floor(speed/target));
+        const timer = setInterval(()=>{
+          start+=1;
+          el.textContent = start + (start < target ? '' : '+');
+          if(start>=target) clearInterval(timer);
+        }, stepTime);
+      });
+    };
+    const hero = document.querySelector('.hero');
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ animateCounters(); obs.disconnect(); }});
+    }, {threshold:0.4});
+    if(hero) obs.observe(hero);
+
+    // Typewriter (roles)
+    (function(){
+      const roles = ['PLC Programmer','Researcher','Automation Engineer'];
+      let i=0, j=0, dir=1;
+      const target = document.createElement('span');
+      target.className='typewriter';
+      document.querySelector('.hero-right h1').appendChild(target);
+      const loop = () => {
+        const full = roles[i];
+        target.textContent = full.slice(0,j);
+        j += dir;
+        if(j > full.length){ dir = -1; setTimeout(loop, 900); return; }
+        if(j < 0){ dir = 1; i = (i+1) % roles.length; j = 0; }
+        setTimeout(loop, 70);
+      };
+      loop();
+    })();
+
+    // Theme toggle
+    document.getElementById('themeToggle').addEventListener('click', (e)=>{
+      e.preventDefault();
+      document.body.classList.toggle('light-mode');
+      if(document.body.classList.contains('light-mode')){
+        document.documentElement.style.setProperty('--bg-1','#f7fafc');
+        document.documentElement.style.setProperty('--bg-2','#e6eef9');
+        document.documentElement.style.setProperty('--muted','#4b5563');
+      } else {
+        document.documentElement.style.setProperty('--bg-1','#071029');
+        document.documentElement.style.setProperty('--bg-2','#0d2747');
+        document.documentElement.style.setProperty('--muted','#98a6bd');
+      }
+    });
+  </script>
+</body>
+</html>
