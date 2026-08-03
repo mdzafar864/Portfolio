@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Md Zafar — Portfolio | Automation Engineer & Web Developer</title>
+  <meta name="description" content="Md Zafar portfolio — PLC Programming, Industrial Automation, Research Publications, Projects, Web Development and MZ Tech Solution services." />
+  <meta name="keywords" content="Md Zafar, Web Developer, PLC Programmer, Automation Engineer, MZ Tech Solution, Portfolio, Research Paper, Smart Zebra Crossing" />
+  <meta name="author" content="Md Zafar" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#0b1227'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(59,130,246,.35)',
+            card: '0 20px 70px rgba(2, 6, 23, .28)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *{font-family:Inter,system-ui,sans-serif}
+    body{background:#050b1f;color:#eaf2ff;overflow-x:hidden}
+    .bg-grid{
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.12) 1px, transparent 0);
+      background-size: 34px 34px;
+    }
+    .glass{background:rgba(15,23,42,.62);border:1px solid rgba(148,163,184,.18);backdrop-filter:blur(18px)}
+    .light .glass{background:rgba(255,255,255,.75);border-color:rgba(15,23,42,.08)}
+    .gradient-text{background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .blob{position:absolute;border-radius:9999px;filter:blur(70px);opacity:.48;pointer-events:none;animation:float 8s ease-in-out infinite}
+    .blob-two{animation-delay:2s}
+    @keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.06)}}
+    .reveal{opacity:0;transform:translateY(22px);transition:all .75s ease}
+    .reveal.show{opacity:1;transform:none}
+    .active-link{color:#fff;background:rgba(59,130,246,.18)}
+    .light .active-link{color:#1d4ed8;background:rgba(37,99,235,.10)}
+    .service-card,.project-card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+    .service-card:hover,.project-card:hover{transform:translateY(-6px);border-color:rgba(96,165,250,.55);box-shadow:0 18px 55px rgba(37,99,235,.18)}
+    .typing-cursor::after{content:'|';margin-left:4px;color:#60a5fa;animation:blink .8s infinite}
+    @keyframes blink{50%{opacity:0}}
+  </style>
+</head>
+<body class="font-inter antialiased selection:bg-blue-500 selection:text-white">
+  <div class="fixed inset-0 -z-10 bg-[#050b1f] light:bg-slate-50"></div>
+  <div class="fixed inset-0 -z-10 bg-grid opacity-40"></div>
+  <div class="blob top-[-120px] left-[-120px] h-80 w-80 bg-blue-600"></div>
+  <div class="blob blob-two right-[-120px] top-[280px] h-96 w-96 bg-cyan-500"></div>
+  <div class="blob bottom-[-140px] left-[30%] h-80 w-80 bg-violet-600"></div>
+
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl light:bg-white/75 light:border-slate-200">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#home" class="flex items-center gap-3">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-lg font-black text-white shadow-glow">MZ</span>
+        <span>
+          <span class="block text-sm font-black tracking-wide light:text-slate-950">Md Zafar</span>
+          <span class="block text-xs text-slate-400 light:text-slate-600">Automation + Web Developer</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-1 rounded-2xl border border-white/10 bg-white/5 p-1 lg:flex light:bg-slate-100 light:border-slate-200" id="desktopNav">
+        <a class="nav-link rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white light:text-slate-700" href="#home">Home</a>
+        <a class="nav-link rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white light:text-slate-700" href="#about">About</a>
+        <a class="nav-link rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white light:text-slate-700" href="#publication">Publication</a>
+        <a class="nav-link rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white light:text-slate-700" href="#projects">Projects</a>
+        <a class="nav-link rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white light:text-slate-700" href="#skills">Skills</a>
+        <a class="nav-link rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white light:text-slate-700" href="#services">Services</a>
+        <a class="nav-link rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white light:text-slate-700" href="#contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-bold text-white hover:bg-white/10 light:text-slate-900 light:border-slate-200 light:bg-slate-100">🌙</button>
+        <a href="https://drive.google.com/uc?export=download&id=1tcrLMW9VA-0W-suQ2HpRep835zPRgOHh" class="hidden rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-2 text-sm font-black text-white shadow-glow sm:inline-flex">Download CV</a>
+        <button id="menuBtn" class="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xl lg:hidden light:text-slate-900 light:border-slate-200 light:bg-slate-100">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-950/95 px-4 py-4 backdrop-blur-xl lg:hidden light:bg-white/95 light:border-slate-200">
+      <div class="mx-auto grid max-w-7xl gap-2">
+        <a class="mobile-link rounded-xl px-4 py-3 font-semibold text-slate-300 light:text-slate-700" href="#home">Home</a>
+        <a class="mobile-link rounded-xl px-4 py-3 font-semibold text-slate-300 light:text-slate-700" href="#about">About</a>
+        <a class="mobile-link rounded-xl px-4 py-3 font-semibold text-slate-300 light:text-slate-700" href="#publication">Publication</a>
+        <a class="mobile-link rounded-xl px-4 py-3 font-semibold text-slate-300 light:text-slate-700" href="#projects">Projects</a>
+        <a class="mobile-link rounded-xl px-4 py-3 font-semibold text-slate-300 light:text-slate-700" href="#skills">Skills</a>
+        <a class="mobile-link rounded-xl px-4 py-3 font-semibold text-slate-300 light:text-slate-700" href="#services">Services</a>
+        <a class="mobile-link rounded-xl px-4 py-3 font-semibold text-slate-300 light:text-slate-700" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="mx-auto grid min-h-[88vh] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8">
+      <div class="reveal order-2 lg:order-1">
+        <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-400/25 bg-blue-500/10 px-4 py-2 text-sm font-bold text-blue-200 light:text-blue-700 light:bg-blue-50">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Available for website & automation projects
+        </div>
+        <h1 class="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl light:text-slate-950">
+          Hi, I'm <span class="gradient-text">Md Zafar</span><br />
+          <span id="typewriter" class="typing-cursor text-3xl sm:text-5xl"></span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300 light:text-slate-700">
+          Electrical Engineer, researcher, PLC programmer and web developer. I build industrial automation systems, smart road-safety projects, dynamic websites and full-stack business solutions.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="mailto:mdzafarsabour35@gmail.com" class="rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 font-black text-white shadow-glow transition hover:scale-[1.02]">Hire Me</a>
+          <a href="#services" class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-bold text-white transition hover:bg-white/10 light:text-slate-950 light:border-slate-200 light:bg-white">View Services</a>
+          <a href="https://www.linkedin.com/in/mdzafar864" target="_blank" class="rounded-2xl border border-blue-400/30 bg-blue-500/10 px-6 py-3 font-bold text-blue-200 transition hover:bg-blue-500/20 light:text-blue-700">LinkedIn</a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div class="glass rounded-3xl p-5 text-center"><div class="stat-num text-3xl font-black" data-target="8">0</div><p class="mt-1 text-xs font-semibold text-slate-400 light:text-slate-600">Years Experience</p></div>
+          <div class="glass rounded-3xl p-5 text-center"><div class="stat-num text-3xl font-black" data-target="120">0</div><p class="mt-1 text-xs font-semibold text-slate-400 light:text-slate-600">Projects / Tests</p></div>
+          <div class="glass rounded-3xl p-5 text-center"><div class="stat-num text-3xl font-black" data-target="12">0</div><p class="mt-1 text-xs font-semibold text-slate-400 light:text-slate-600">Technologies</p></div>
+          <div class="glass rounded-3xl p-5 text-center"><div class="stat-num text-3xl font-black" data-target="50">0</div><p class="mt-1 text-xs font-semibold text-slate-400 light:text-slate-600">Happy Clients</p></div>
+        </div>
+      </div>
+
+      <div class="reveal order-1 flex justify-center lg:order-2">
+        <div class="relative">
+          <div class="absolute -inset-8 rounded-full bg-gradient-to-r from-blue-600 via-cyan-400 to-violet-500 opacity-30 blur-3xl"></div>
+          <div class="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-3 shadow-card light:bg-white light:border-slate-200">
+            <img src="https://raw.githubusercontent.com/mdzafar864/Portfolio/main/download.webp" alt="Md Zafar" loading="eager" class="h-[420px] w-[340px] rounded-[2rem] object-cover sm:h-[520px] sm:w-[410px]" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 glass rounded-3xl p-4 shadow-card">
+            <p class="text-xs font-semibold text-slate-400 light:text-slate-600">Startup</p>
+            <p class="text-lg font-black text-white light:text-slate-950">MZ Tech Solution</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal glass rounded-[2rem] p-6 shadow-card sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+          <div>
+            <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-blue-300 light:text-blue-700">About Me</p>
+            <h2 class="text-3xl font-black text-white sm:text-5xl light:text-slate-950">Automation mindset with modern web development skills.</h2>
+          </div>
+          <p class="text-lg leading-8 text-slate-300 light:text-slate-700">
+            I specialize in PLC programming, industrial automation, research, automation testing and web development. I build reliable control logic, automated testing solutions and professional responsive websites using HTML, CSS, JavaScript, PHP and MySQL. My focus is on creating safe, maintainable and user-friendly systems that combine industrial automation with modern web technologies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publication" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal mb-10 text-center">
+        <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-blue-300 light:text-blue-700">Research</p>
+        <h2 class="text-3xl font-black text-white sm:text-5xl light:text-slate-950">Research Publications</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-slate-300 light:text-slate-700">Published and project-based research work in smart infrastructure, road safety and intelligent automation systems.</p>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-2">
+        <article class="reveal glass rounded-[2rem] p-7 shadow-card">
+          <span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-black text-blue-200 light:text-blue-700">Road Safety Research</span>
+          <h3 class="mt-5 text-2xl font-black text-white light:text-slate-950">Development of Intelligent Zebra Crossings to Mitigate Traffic Accidents</h3>
+          <p class="mt-4 leading-7 text-slate-300 light:text-slate-700">Authors: Sujit Kumar, Deeba Ashique, Md. Zafar, Alka Raj. International Science and Technology Journal, Vol. 48, Special Issue No. 2, Sept 2025.</p>
+          <p class="mt-4 text-sm font-semibold text-slate-400 light:text-slate-600">Department of Electrical Engineering, Government Engineering College Banka, Bihar Engineering University Patna.</p>
+        </article>
+        <article class="reveal glass rounded-[2rem] p-7 shadow-card">
+          <span class="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-black text-cyan-200 light:text-cyan-700">Smart Infrastructure</span>
+          <h3 class="mt-5 text-2xl font-black text-white light:text-slate-950">Enhancing Road Safety with Smart Infrastructure</h3>
+          <p class="mt-4 leading-7 text-slate-300 light:text-slate-700">Development and implementation of advanced zebra crossings and speed-breaking systems with automation and intelligent transport concepts.</p>
+          <p class="mt-4 text-sm font-semibold text-slate-400 light:text-slate-600">Research Area: Smart Road Safety · Automation · Intelligent Transport Infrastructure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-blue-300 light:text-blue-700">Work</p>
+          <h2 class="text-3xl font-black text-white sm:text-5xl light:text-slate-950">Projects</h2>
+          <p class="mt-4 max-w-2xl text-slate-300 light:text-slate-700">Filter projects by category and view selected work from web development, automation, IoT and research.</p>
+        </div>
+        <div class="flex flex-wrap gap-2" id="projectFilters">
+          <button class="filter-btn active rounded-full bg-blue-600 px-4 py-2 text-sm font-black text-white" data-filter="all">All</button>
+          <button class="filter-btn rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-slate-300 light:text-slate-700 light:border-slate-200" data-filter="web">Web</button>
+          <button class="filter-btn rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-slate-300 light:text-slate-700 light:border-slate-200" data-filter="automation">Automation</button>
+          <button class="filter-btn rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-slate-300 light:text-slate-700 light:border-slate-200" data-filter="iot">IoT</button>
+        </div>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="projectGrid">
+        <article class="project-card reveal glass rounded-[2rem] p-6 shadow-card" data-category="web">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-blue-500/15 text-2xl">🌐</div>
+          <h3 class="text-xl font-black text-white light:text-slate-950">Tax2Free Consultancy Website</h3>
+          <p class="mt-3 leading-7 text-slate-300 light:text-slate-700">Full-stack business website with booking system, Razorpay integration, customer/admin/partner/agent dashboards and SEO setup.</p>
+          <a class="mt-5 inline-flex rounded-xl bg-blue-600 px-4 py-2 text-sm font-black text-white" href="https://tax2freeconsultancy.com/" target="_blank">Live Website</a>
+        </article>
+
+        <article class="project-card reveal glass rounded-[2rem] p-6 shadow-card" data-category="web">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-emerald-500/15 text-2xl">📱</div>
+          <h3 class="text-xl font-black text-white light:text-slate-950">BEU Syllabus & PYQ Apps</h3>
+          <p class="mt-3 leading-7 text-slate-300 light:text-slate-700">Progressive Web Apps for BEU syllabus and previous year questions by branch and semester. Telegram bot for easy access.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <a class="inline-flex rounded-xl bg-blue-600 px-4 py-2 text-sm font-black text-white" href="https://mdzafar864.github.io/BEU-Syllabus-App/" target="_blank">📚 Syllabus</a>
+            <a class="inline-flex rounded-xl bg-purple-600 px-4 py-2 text-sm font-black text-white" href="https://mdzafar864.github.io/BEU-PYQ-App/" target="_blank">📝 PYQ</a>
+            <a class="inline-flex rounded-xl bg-sky-600 px-4 py-2 text-sm font-black text-white" href="https://t.me/beu_syllabuss_bot" target="_blank">🤖 Bot</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal glass rounded-[2rem] p-6 shadow-card" data-category="web">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-orange-500/15 text-2xl">🛒</div>
+          <h3 class="text-xl font-black text-white light:text-slate-950">Gadgets Fusion — E-Commerce</h3>
+          <p class="mt-3 leading-7 text-slate-300 light:text-slate-700">Modern e-commerce website for gadgets and electronics with product catalog and shopping features.</p>
+          <a class="mt-5 inline-flex rounded-xl bg-blue-600 px-4 py-2 text-sm font-black text-white" href="https://mdzafar864.github.io/Gadgets-Fusion/" target="_blank">Live Website</a>
+        </article>
+
+        <article class="project-card reveal glass rounded-[2rem] p-6 shadow-card" data-category="automation">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-cyan-500/15 text-2xl">🚦</div>
+          <h3 class="text-xl font-black text-white light:text-slate-950">Smart Zebra Crossing System</h3>
+          <p class="mt-3 leading-7 text-slate-300 light:text-slate-700">Smart road-safety project to improve pedestrian crossing safety using intelligent sensing, visual alerts and automation concepts.</p>
+        </article>
+
+        <article class="project-card reveal glass rounded-[2rem] p-6 shadow-card" data-category="automation">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-violet-500/15 text-2xl">🛣️</div>
+          <h3 class="text-xl font-black text-white light:text-slate-950">Advanced Zebra Crossing</h3>
+          <p class="mt-3 leading-7 text-slate-300 light:text-slate-700">Advanced crossing concept for accident prevention using better visibility, automated warnings and smart traffic control support.</p>
+        </article>
+
+        <article class="project-card reveal glass rounded-[2rem] p-6 shadow-card" data-category="automation">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-amber-500/15 text-2xl">⚡</div>
+          <h3 class="text-xl font-black text-white light:text-slate-950">Automatic Load Sharing of Transformer</h3>
+          <p class="mt-3 leading-7 text-slate-300 light:text-slate-700">Arduino-based electrical engineering project focused on reliable transformer load sharing and automation logic.</p>
+        </article>
+
+        <article class="project-card reveal glass rounded-[2rem] p-6 shadow-card" data-category="iot">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-sky-500/15 text-2xl">💧</div>
+          <h3 class="text-xl font-black text-white light:text-slate-950">IoT Smart Water Quality Monitoring</h3>
+          <p class="mt-3 leading-7 text-slate-300 light:text-slate-700">IoT monitoring concept using Node-RED for real-time water quality data visualization and smart monitoring workflow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal mb-10 text-center">
+        <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-blue-300 light:text-blue-700">Tech Stack</p>
+        <h2 class="text-3xl font-black text-white sm:text-5xl light:text-slate-950">Skills</h2>
+      </div>
+      <div class="reveal grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="glass rounded-[2rem] p-6"><h3 class="font-black text-white light:text-slate-950">Web Development</h3><p class="mt-3 text-slate-300 light:text-slate-700">HTML, CSS, JavaScript, PHP, MySQL, PWA, SEO</p></div>
+        <div class="glass rounded-[2rem] p-6"><h3 class="font-black text-white light:text-slate-950">Automation</h3><p class="mt-3 text-slate-300 light:text-slate-700">PLC, SCADA, HMI, Control Logic, Industrial Protocols</p></div>
+        <div class="glass rounded-[2rem] p-6"><h3 class="font-black text-white light:text-slate-950">Programming</h3><p class="mt-3 text-slate-300 light:text-slate-700">Python, C#, JavaScript, Arduino, Git</p></div>
+        <div class="glass rounded-[2rem] p-6"><h3 class="font-black text-white light:text-slate-950">Testing & Research</h3><p class="mt-3 text-slate-300 light:text-slate-700">Automation Testing, Documentation, Research Writing</p></div>
+      </div>
+      <div class="reveal mt-6 flex flex-wrap justify-center gap-3">
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">HTML</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">CSS</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">JavaScript</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">PHP</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">MySQL</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">PLC</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">SCADA</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 font-bold text-slate-300 light:text-slate-700 light:border-slate-200">PWA</span>
+      </div>
+    </section>
+
+    <section id="services" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal mb-10 text-center">
+        <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-blue-300 light:text-blue-700">Startup Services</p>
+        <h2 class="text-3xl font-black text-white sm:text-5xl light:text-slate-950">MZ Tech Solution</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-slate-300 light:text-slate-700">Modern tech solutions, website development and digital services for businesses with affordable pricing and professional support.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a class="rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3 font-black text-white shadow-glow" href="https://www.linkedin.com/safety/go/?url=https%3A%2F%2Flnkd%2Ein%2Fg6CPgsnf&urlhash=e5M2&mt=06jLxVKoByxPCQBUPN2jRGKO9OVa3WHb2HvVLCauh4U8Kf_njwdVU7p060qm7vtW2cTZHZum27_dFRDY4pfVIHFYqEvW9Dn1N1f9-MJkClgkvq2bs6_ghgbrDo0&isSdui=true" target="_blank">Visit MZ Tech Solution</a>
+          <a class="rounded-2xl border border-pink-400/30 bg-pink-500/10 px-5 py-3 font-black text-pink-200 light:text-pink-700" href="https://www.instagram.com/official.mzwebsolutions?igsh=eXc3bTlsdDIycDVo" target="_blank">Instagram @official.mztechsolution</a>
+        </div>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="service-card reveal glass rounded-[2rem] p-6 shadow-card"><div class="text-3xl">💻</div><h3 class="mt-4 text-xl font-black text-white light:text-slate-950">Modern & Responsive Website</h3><p class="mt-3 text-slate-300 light:text-slate-700">Clean UI, mobile-friendly layout and professional business website design.</p><p class="mt-5 text-3xl font-black text-white light:text-slate-950">₹5000</p></div>
+        <div class="service-card reveal glass rounded-[2rem] p-6 shadow-card"><div class="text-3xl">🎯</div><h3 class="mt-4 text-xl font-black text-white light:text-slate-950">SEO • UI/UX • Branding</h3><p class="mt-3 text-slate-300 light:text-slate-700">Search-friendly pages, brand structure and user experience improvement.</p><p class="mt-5 text-3xl font-black text-white light:text-slate-950">₹1000</p></div>
+        <div class="service-card reveal glass rounded-[2rem] p-6 shadow-card"><div class="text-3xl">🚀</div><h3 class="mt-4 text-xl font-black text-white light:text-slate-950">PWA Development</h3><p class="mt-3 text-slate-300 light:text-slate-700">Installable website with offline support, app-like experience and fast loading.</p><p class="mt-5 text-3xl font-black text-white light:text-slate-950">₹1000</p></div>
+        <div class="service-card reveal glass rounded-[2rem] p-6 shadow-card"><div class="text-3xl">🛠️</div><h3 class="mt-4 text-xl font-black text-white light:text-slate-950">Website Management</h3><p class="mt-3 text-slate-300 light:text-slate-700">Monthly updates, content changes and new feature maintenance.</p><p class="mt-5 text-3xl font-black text-white light:text-slate-950">₹1000 <span class="text-base text-slate-400">/ month</span></p></div>
+        <div class="service-card reveal glass rounded-[2rem] p-6 shadow-card"><div class="text-3xl">🗄️</div><h3 class="mt-4 text-xl font-black text-white light:text-slate-950">Database Management</h3><p class="mt-3 text-slate-300 light:text-slate-700">MySQL database setup, table structure and backend support.</p><p class="mt-5 text-3xl font-black text-white light:text-slate-950">₹1500 <span class="text-base text-slate-400">/ month</span></p></div>
+        <div class="service-card reveal glass rounded-[2rem] p-6 shadow-card"><div class="text-3xl">📣</div><h3 class="mt-4 text-xl font-black text-white light:text-slate-950">Social Media Promotion</h3><p class="mt-3 text-slate-300 light:text-slate-700">Promotional video/post support for business growth and visibility.</p><p class="mt-5 text-3xl font-black text-white light:text-slate-950">₹500 <span class="text-base text-slate-400">/ video</span></p></div>
+      </div>
+
+      <div class="reveal mt-10 rounded-[2rem] border border-blue-400/25 bg-gradient-to-r from-blue-600/20 to-cyan-500/10 p-7 shadow-card sm:flex sm:items-center sm:justify-between sm:gap-6">
+        <div>
+          <h3 class="text-2xl font-black text-white light:text-slate-950">Let's build a website that takes your business to the next level.</h3>
+          <p class="mt-2 text-slate-300 light:text-slate-700">Fast delivery • Best quality • Affordable price • SEO friendly</p>
+        </div>
+        <a href="https://wa.me/919504655363" target="_blank" class="mt-5 inline-flex rounded-2xl bg-yellow-400 px-6 py-3 font-black text-slate-950 sm:mt-0">Contact on WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="certifications" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal glass rounded-[2rem] p-8 text-center shadow-card">
+        <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-blue-300 light:text-blue-700">Learning</p>
+        <h2 class="text-3xl font-black text-white sm:text-5xl light:text-slate-950">Certifications</h2>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <span class="rounded-full bg-blue-500/10 px-4 py-2 font-bold text-blue-100 light:text-blue-700">3-Day AI-Powered SEO Masterclass</span>
+          <span class="rounded-full bg-blue-500/10 px-4 py-2 font-bold text-blue-100 light:text-blue-700">Web Development</span>
+          <span class="rounded-full bg-blue-500/10 px-4 py-2 font-bold text-blue-100 light:text-blue-700">PWA & Service Workers</span>
+          <span class="rounded-full bg-blue-500/10 px-4 py-2 font-bold text-blue-100 light:text-blue-700">PLC Programming</span>
+          <span class="rounded-full bg-blue-500/10 px-4 py-2 font-bold text-blue-100 light:text-blue-700">Industrial Automation</span>
+          <span class="rounded-full bg-blue-500/10 px-4 py-2 font-bold text-blue-100 light:text-blue-700">Software Testing</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal grid gap-8 lg:grid-cols-[.85fr_1.15fr]">
+        <div class="glass rounded-[2rem] p-8 shadow-card">
+          <p class="mb-3 text-sm font-black uppercase tracking-[.25em] text-blue-300 light:text-blue-700">Contact</p>
+          <h2 class="text-3xl font-black text-white sm:text-5xl light:text-slate-950">Let's work together.</h2>
+          <p class="mt-5 leading-8 text-slate-300 light:text-slate-700">Interested in website development, PLC programming, automation or research collaboration? Send a message.</p>
+          <div class="mt-7 grid gap-3">
+            <a class="rounded-2xl border border-white/10 bg-white/5 p-4 font-bold text-slate-200 light:text-slate-800 light:border-slate-200" href="mailto:mdzafarsabour35@gmail.com">📧 mdzafarsabour35@gmail.com</a>
+            <a class="rounded-2xl border border-white/10 bg-white/5 p-4 font-bold text-slate-200 light:text-slate-800 light:border-slate-200" href="https://wa.me/919504655363" target="_blank">📞 WhatsApp: 9504655363</a>
+            <a class="rounded-2xl border border-white/10 bg-white/5 p-4 font-bold text-slate-200 light:text-slate-800 light:border-slate-200" href="https://www.linkedin.com/in/mdzafar864" target="_blank">🔗 LinkedIn: mdzafar864</a>
+          </div>
+        </div>
+
+        <form id="contactForm" class="glass rounded-[2rem] p-6 shadow-card sm:p-8">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <input id="name" required placeholder="Your name" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-slate-500 focus:border-blue-400 light:text-slate-950 light:bg-white light:border-slate-200" />
+            <input id="email" type="email" required placeholder="Email" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-slate-500 focus:border-blue-400 light:text-slate-950 light:bg-white light:border-slate-200" />
+            <select id="subject" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none focus:border-blue-400 sm:col-span-2 light:text-slate-950 light:bg-white light:border-slate-200">
+              <option class="text-slate-950">Website Development</option>
+              <option class="text-slate-950">PLC / Automation</option>
+              <option class="text-slate-950">Research Collaboration</option>
+              <option class="text-slate-950">Other</option>
+            </select>
+            <textarea id="message" required placeholder="Message" class="min-h-36 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-slate-500 focus:border-blue-400 sm:col-span-2 light:text-slate-950 light:bg-white light:border-slate-200"></textarea>
+          </div>
+          <button type="submit" class="mt-5 w-full rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-4 font-black text-white shadow-glow">Send Message</button>
+          <p id="formStatus" class="mt-4 hidden rounded-2xl bg-emerald-500/10 p-4 text-sm font-bold text-emerald-200 light:text-emerald-700"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 py-8 text-center text-sm font-semibold text-slate-400 light:border-slate-200 light:text-slate-600">
+    © <span id="year"></span> Md Zafar — Built with Tailwind CSS, JavaScript & ❤️
+  </footer>
+
+  <button id="topBtn" class="fixed bottom-5 right-5 hidden rounded-2xl bg-blue-600 px-4 py-3 font-black text-white shadow-glow">↑</button>
+
+  <script>
+    const root = document.documentElement;
+    const body = document.body;
+    const year = document.getElementById('year');
+    year.textContent = new Date().getFullYear();
+
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if(savedTheme === 'light') body.classList.add('light');
+    const themeToggle = document.getElementById('themeToggle');
+    const updateThemeIcon = () => themeToggle.textContent = body.classList.contains('light') ? '☀️' : '🌙';
+    updateThemeIcon();
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light');
+      localStorage.setItem('portfolio-theme', body.classList.contains('light') ? 'light' : 'dark');
+      updateThemeIcon();
+    });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    const words = ['PLC PROGRAMMER', 'RESEARCHER', 'AUTOMATION ENGINEER', 'WEB DEVELOPER', 'FULL-STACK LEARNER'];
+    const typeEl = document.getElementById('typewriter');
+    let wi = 0, ci = 0, deleting = false;
+    function typeLoop(){
+      const word = words[wi];
+      typeEl.textContent = word.slice(0, ci);
+      if(!deleting && ci < word.length) ci++;
+      else if(!deleting && ci === word.length) { deleting = true; return setTimeout(typeLoop, 1100); }
+      else if(deleting && ci > 0) ci--;
+      else { deleting = false; wi = (wi + 1) % words.length; }
+      setTimeout(typeLoop, deleting ? 38 : 70);
+    }
+    typeLoop();
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){ entry.target.classList.add('show'); revealObserver.unobserve(entry.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    let statsDone = false;
+    const statsObserver = new IntersectionObserver(entries => {
+      if(statsDone) return;
+      if(entries.some(e => e.isIntersecting)){
+        statsDone = true;
+        document.querySelectorAll('.stat-num').forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          let current = 0;
+          const step = Math.max(1, Math.ceil(target / 70));
+          const timer = setInterval(() => {
+            current += step;
+            if(current >= target){ current = target; clearInterval(timer); }
+            el.textContent = current + '+';
+          }, 22);
+        });
+      }
+    }, { threshold: 0.4 });
+    const firstStat = document.querySelector('.stat-num');
+    if(firstStat) statsObserver.observe(firstStat);
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active','bg-blue-600','text-white');
+          b.classList.add('border','border-white/10','bg-white/5','text-slate-300');
+        });
+        btn.classList.add('active','bg-blue-600','text-white');
+        btn.classList.remove('border','border-white/10','bg-white/5','text-slate-300');
+        const filter = btn.dataset.filter;
+        projectCards.forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const navLinks = [...document.querySelectorAll('.nav-link')];
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          navLinks.forEach(link => link.classList.toggle('active-link', link.getAttribute('href') === '#' + entry.target.id));
+        }
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+    sections.forEach(sec => navObserver.observe(sec));
+
+    const topBtn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => topBtn.classList.toggle('hidden', window.scrollY < 600));
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const subject = encodeURIComponent(document.getElementById('subject').value);
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const mail = `mailto:mdzafarsabour35@gmail.com?subject=${subject}%20Inquiry%20from%20${name}&body=Name:%20${name}%0AEmail:%20${email}%0AService:%20${subject}%0A%0AMessage:%0A${message}`;
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Opening your email app...';
+      status.classList.remove('hidden');
+      window.location.href = mail;
+    });
+  </script>
+</body>
+</html>
